@@ -98,7 +98,27 @@ flowchart TD
 
 ### How to Install and Run with Docker
 
-1. **Build and run the Docker container**:
+1. **Create a .env file** with your configuration:
+   ```
+   # Cloud Manager Settings
+   CLOUD_MANAGER_TENANT_ID=your-tenant-id
+   CLOUD_MANAGER_PAT_SECRET=your-pat-secret
+   CLOUD_MANAGER_PAT_LOGIN_URL=https://cloudmanager.tableau.com/api/v1/pat/login
+   CLOUD_MANAGER_JWT_LOGIN_URL=https://cloudmanager.tableau.com/api/v1/jwt/login
+   CLOUD_MANAGER_UAT_CONFIGS_URL=https://cloudmanager.tableau.com/api/v1/uat-configurations
+
+   # Tableau Cloud Settings
+   TABLEAU_CLOUD_POD_URL=https://your-pod.online.tableau.com
+   TABLEAU_CLOUD_USERNAME=your-email@example.com
+   TABLEAU_CLOUD_SITE_ID=your-site-id
+   TABLEAU_CLOUD_SITE_LUID=your-site-luid
+
+   # JWT Settings
+   JWT_ISSUER=your-issuer
+   JWT_EXPIRATION=5
+   ```
+
+2. **Build and run the Docker container**:
    ```bash
    # Build the image
    docker build -t tableau-uat-tool .
@@ -106,10 +126,10 @@ flowchart TD
    # Run with Docker Compose (recommended)
    docker compose up -d
    ```
-2. **Access the application**:
+3. **Access the application**:
    Open your web browser and navigate to `http://localhost:7860`
 
-3. **Stop the container**:
+4. **Stop the container**:
    ```bash
    # If using Docker Compose
    docker compose down
@@ -136,13 +156,14 @@ flowchart TD
    ```bash
    pip install -r requirements.txt
    ```
-
-4. **Run the application**:
+4. **Create a .env file** with your configuration (see Docker section for example)
+   
+5. **Run the application**:
    ```bash
    python app.py
    ```
 
-5. **Access the application**:
+6. **Access the application**:
    Open your web browser and navigate to `http://localhost:7860`
 
 ## Usage Guide
