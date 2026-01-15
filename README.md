@@ -105,7 +105,7 @@ flowchart TD
 
    # Run with Docker Compose (recommended)
    docker compose up -d
-
+    ```
 5. **Access the application**:
    Open your web browser and navigate to `http://localhost:7860`
 
