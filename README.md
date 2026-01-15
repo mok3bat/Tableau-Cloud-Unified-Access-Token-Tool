@@ -122,7 +122,7 @@ flowchart TD
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/tableau-uat-tool.git
+   git clone https://github.com/mok3bat/Tableau-Cloud-Unified-Access-Token-Tool.git
    cd tableau-uat-tool
    ```
 
